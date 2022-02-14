@@ -15,6 +15,7 @@ public class IceCream {
         this.salePrice = salePrice;
         this.productionCost = productionCost;
         this.productionTime = productionTime;
+        this.ingredients = ingredients;
     }
 
 
@@ -54,7 +55,7 @@ public class IceCream {
         return ingredients;
     }
 
-    public void addIngredients(String newIngredient) {
-        this.ingredients.add(newIngredient);
+    public void setIngredients(List<String> ingredients) {
+        this.ingredients = ingredients;
     }
 }
