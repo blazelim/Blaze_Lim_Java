@@ -71,8 +71,8 @@ public class CustomerTest {
 
     @Test
     public void abilityToGetAddresses() {
-        assertTrue(cus.getBillingAddress().equals(bill));
-        assertTrue(cus.getShippingAddress().equals(ship));
+        assertEquals(cus.getBillingAddress(), bill);
+        assertEquals(cus.getShippingAddress(), ship);
     }
 
     @Test
@@ -85,7 +85,10 @@ public class CustomerTest {
                 "67894");
 
         assertNotEquals(cus.getShippingAddress(), newAddress);
+        assertNotEquals(cus.getBillingAddress(), newAddress);
         cus.setShippingAddress(newAddress);
+        cus.setBillingAddress(newAddress);
         assertEquals(cus.getShippingAddress(),newAddress);
+        assertEquals(cus.getBillingAddress(),newAddress);
     }
 }
